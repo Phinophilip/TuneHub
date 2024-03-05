@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TuneHub</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/CustomerViewSongs.css}"></link>
+<link rel="stylesheet"
+	href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Customer-Home</h2>
+		</header>
+	</div>
+	<div class="large-text">
+		<span class="first-letter">Song</span>
+		<div class="large-text1">Information</div>
+	</div>
+	<div class="table">
+		<table>
+			<thead>
+				<tr>
+					<th>SongName</th>
+					<th>Artist</th>
+					<th>Genre</th>
+					<th>Play</th>
+					<th>PlayList</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr th:each="song : ${songs}">
+					<td th:text="${song.name}"></td>
+					<td th:text="${song.artist}"></td>
+					<td th:text="${song.genre}"></td>
+					<td><img
+						src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+						alt="TuneHub Logo" width="50" height="50"> <audio controls>
+							<source th:src="${song.link}" type="audio/mpeg">
+						</audio></td>
+					<td>
+						<form id="addPlaylistForm" action="/customeraddplay" method="post">
+							<input type="hidden" name="name" th:value="${song.name}" /> <input
+								type="text" name="playlistName" placeholder="Playlist Name"
+								style="display: none;" />
+							<button type="button" onclick="showAddPlaylistForm()"
+								data-tippy-content="Click to view Add This Song to Playlist">Add
+								To Playlist</button>
+							<button type="submit" id="submitButton" style="display: none;">Submit</button>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<form action="viewplaylist" method="get">
+			<button type="submit">View PlayList</button>
+		</form>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script>
+	        document.addEventListener('DOMContentLoaded', function() {
+            tippy('[data-tippy-content]');
+        });
+       </script>
+	<script>
+    function showAddPlaylistForm() {
+        var playlistNameInput = document.querySelector('input[name="playlistName"]');
+        var submitButton = document.getElementById('submitButton');
+        var addToPlaylistButton = document.querySelector('button[type="button"]');
+
+        playlistNameInput.style.display = 'inline-block'; // Display the playlist name input
+        submitButton.style.display = 'inline-block'; // Display the submit button
+        addToPlaylistButton.style.display = 'none'; // Hide the "Add To Playlist" button
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TuneHub</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/DisplayPlaylist.css}"></link>
+<link rel="stylesheet"
+	href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Admin-Home</h2>
+		</header>
+	</div>
+	<div class="table">
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>PlayList</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr th:each="play : ${playlist}">
+					<td th:text="${play.id}"></td>
+					<td><a class="button" th:text="${play.name}"
+						th:href="@{/songList(name=${play.name})}"
+						data-tippy-content="Click to view songs in this playlist"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            tippy('[data-tippy-content]');
+        });
+    </script>
+
+</body>
+</html>

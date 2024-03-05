@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TuneHub</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css"
+	th:href="@{/CustomerDisplayPlaylist.css}"></link>
+<link rel="stylesheet"
+	href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Customer-Home</h2>
+		</header>
+	</div>
+	<div class="playlist-container">
+		<div class="playlist-item" th:each="play : ${playlist}">
+		<div class="image-container">
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/fb0f15e07df3986ec95ea200d58e83931e328ca0/3944.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+				</div>
+				<div class="button-container"> 
+				<a
+				class="playlist-name" th:text="${play.name}"
+				th:href="@{/songList(name=${play.name})}"
+				data-tippy-content="Click to view songs in this playlist"></a>
+				<button class="delete-button"
+				th:onclick="'deletePlaylist(' + ${play.id} + ')'">Delete</button>
+				</div>
+		</div>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script>
+	        document.addEventListener('DOMContentLoaded', function() {
+            tippy('[data-tippy-content]');
+        });
+       </script>
+	<script>
+    function deletePlaylist(id) {
+        if (confirm("Are you sure you want to delete this playlist?")) {
+            fetch('/playlists/' + id, {
+                method: 'DELETE',
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Optionally, update the UI to reflect the deletion
+                console.log(data); // Log success message
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        }
+    }
+
+    function toggleMenu(button) {
+        const menuContent = button.nextElementSibling;
+        menuContent.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

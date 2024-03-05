@@ -1,0 +1,187 @@
+body {
+	background-color: #DAA520; /* Lighter gold color for the body */
+	color: #FFD700; /* Lighter gold color for text */
+	font-family: Arial, sans-serif; /* Choose a suitable font family */
+	text-align: center; /* Center-align text */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Header style */
+header {
+	background-color: #353535;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px;
+    margin-bottom:5%;
+    box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28);
+}
+
+.header h1 {
+    margin-left: -73%;
+}
+.large-text {
+    font-family: 'Product Sans', Arial, sans-serif; /* Google logo font */
+    font-size: 100px; /* Adjust the size as needed */
+    color: white; /* Google logo color */
+    background-color:#DAA520; /* Background color */
+    padding: 20px; /* Add padding around the text */
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Add rounded corners */
+  /* Add a shadow */
+   position: relative;
+}
+
+.large-text1 {
+    display: inline-block; /* Display as inline block to stay in line */
+    margin-left:5px;
+      position: absolute;
+        top: 0;
+        right: 0;
+        animation: moveLeft 4s forwards;
+}
+
+.first-letter {
+    display: inline-block; /* Display as inline block to stay in line */
+    vertical-align: top; /* Align with the top of the line */
+    color: #353535;
+     position: absolute;
+        top: 0;
+        left: 0;
+        animation: moveRight 4s forwards;
+}
+    @keyframes moveRight {
+        0% {left: 0;}
+        100% {left: 25%;}
+    }
+    @keyframes moveLeft {
+        0% {right: 0;}
+        100% {right: 25%;}
+    }
+input[type="submit"] {
+	background-color: #353535;
+	/* Darker and more vibrant grey color for submit button background */
+	color: #DAA520; /* Lighter gold color for submit button text */
+	border: none; /* Remove border from submit button */
+	padding: 15px 40px;
+	/* Add padding to submit button for better readability */
+	border-radius: 5px; /* Add border radius for a rounded appearance */
+	cursor: pointer; /* Change cursor to pointer on hover */
+	transition: background-color 0.3s, color 0.3s;
+	/* Add transition for smoother hover effect */
+}
+
+input[type="submit"]:hover {
+	background-color: #404040;
+	/* Change background color on hover to slightly darker grey */
+}
+
+.table {
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Add a semi-transparent white background */
+    padding: 20px; /* Add padding around the table */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28); /* Add a shadow */
+    margin-top: 100px;
+    flex-direction: column; /* Set flex direction to column */
+}
+
+/* Table header styles */
+.table thead {
+    background-color:#353535; /* Darker grey */
+    color: #DAA520; /* Light gold */
+    border: 2px solid #555;
+    margin-bottom:2px;
+    
+}
+
+/* Table header cell styles */
+.table th {
+    padding: 15px;
+    text-align: left;
+    color: #8B7500;
+    
+}
+
+/* Table body row styles */
+.table tbody tr {
+    border: 1px solid #555;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28); /* Custom border */
+}
+
+/* Table body cell styles */
+.table td {
+    padding: 15px;
+    color: #8B7500;
+}
+
+/* Table body cell styles */
+td {
+	padding: 15px;
+	color: #8B7500;
+}
+
+/* Audio player styles */
+.audio-player {
+	display: flex;
+	align-items: center;
+}
+
+.audio-player audio {
+	width: 100%;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+	background-color: #444; /* Dark grey on hover */
+	transition: background-color 0.2s ease;
+}
+
+ button {
+	background-color: #353535;
+	/* Darker and more vibrant grey color for submit button background */
+	color: #DAA520; /* Lighter gold color for submit button text */
+	border: none; /* Remove border from submit button */
+	padding: 15px 40px;
+	/* Add padding to submit button for better readability */
+	border-radius: 5px; /* Add border radius for a rounded appearance */
+	cursor: pointer; /* Change cursor to pointer on hover */
+	transition: background-color 0.3s, color 0.3s;
+	/* Add transition for smoother hover effect */
+}
+
+input[type="text"]{
+	background-color:#DAA520;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 5px;
+	color:#353535;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+button{
+	margin-top:2px;
+}
+button:hover {
+	background-color: #0056b3;
+	/* Change background color on hover to slightly darker grey */
+}
+.footer {
+	margin-top:5%;
+	bottom: 0;
+	left: 0;
+	right:0;
+	width: 98%;
+	background-color: #353535;
+	padding: 15px;
+}

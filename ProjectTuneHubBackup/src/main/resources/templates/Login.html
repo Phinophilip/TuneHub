@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TuneHub</title>
+<link rel="icon" href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/Login.css}"></link>
+</head>
+<body>
+	<div class="header">
+	<header>
+			<img src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg" alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Home</h2>
+		</header>
+	</div>
+	<div class="form">
+		<h2>USER LOGIN</h2>
+		<form action="validate" method="Post">
+			<label>Email </label> <input type="email" name="email" required>
+			<br> <br> <label>Password </label> <input type="password"
+				name="password" required> <br> <br> <input
+				type="submit" value="Login">
+		</form>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+
+</body>
+</html>

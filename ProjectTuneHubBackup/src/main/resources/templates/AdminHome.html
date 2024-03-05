@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>TuneHub</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/AdminHome.css}"></link>
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Admin-Home</h2>
+		</header>
+	</div>
+	<div class="form-container">
+		<div class="left-panel" id="leftPanel">
+			<div class="form1">
+				<form action="addsong" method="Post">
+					<input type="submit" value="Add Songs" />
+				</form>
+			</div>
+			<div class="form2">
+				<form action="get">
+					<input type="submit" value="View Songs" />
+				</form>
+			</div>
+			<div class="form3">
+				<form action="createplaylist">
+					<input type="submit" value="Create Playlist" />
+				</form>
+			</div>
+			<div class="form4">
+				<form action="displayplaylist">
+					<input type="submit" value="Display Playlist" />
+				</form>
+			</div>
+			<div class="toggle-btn" onclick="toggleLeftPanel()">></div>
+		</div>
+	</div>
+	<div class="quote-container">
+		<img
+			src="https://raw.githubusercontent.com/Phinophilip/SongList/52d411da1d50a976071493b7c5468469e32f1dd4/guitar%20tunehub.png"
+			width="250" height="300">
+			<div>
+		 <span class="quote-text">Music
+		</span>gives a soul to the universe, wings to the mind, flight to the
+		imagination, and life to <span class="author">everything.</span> -
+		Plato
+		</div>
+	</div>
+
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+	<script>
+        function toggleLeftPanel() {
+            var panel = document.getElementById("leftPanel");
+            panel.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

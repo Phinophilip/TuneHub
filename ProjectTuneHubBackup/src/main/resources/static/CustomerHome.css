@@ -1,0 +1,157 @@
+/* Body style */
+body {
+	background-color: #DAA520; /* Lighter gold color for the body */
+	color: #FFD700; /* Lighter gold color for text */
+	font-family: Arial, sans-serif; /* Choose a suitable font family */
+	text-align: center; /* Center-align text */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Header style */
+/* Header style */
+header {
+	background-color: #353535;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px;
+    margin-bottom:5%;
+    box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28);
+}
+
+.header h1 {
+    margin-left: -70%;
+}
+
+.form-container {
+	display: flex; /* Use flexbox to align items */
+	justify-content: space-between; /* Add space between the forms */
+	margin-bottom: 25px; /* Adjust margin */
+	margin: 0 auto; /* Center the element */
+	text-align: center; /* Center-align the content inside the element */
+	width: 35%;
+	margin-left: 33%; /* Adjust margin on the left */
+	margin-right: 20%;
+	margin-top:-3%;
+}
+
+
+input[type="text"], input[type="submit"] {
+	background-color: #353535;
+	/* Darker and more vibrant grey color for submit button background */
+	color: #DAA520; /* Lighter gold color for submit button text */
+	border: none; /* Remove border from submit button */
+	padding: 15px 40px;
+	/* Add padding to submit button for better readability */
+	border-radius: 5px; /* Add border radius for a rounded appearance */
+	cursor: pointer; /* Change cursor to pointer on hover */
+	transition: background-color 0.3s, color 0.3s;
+	/* Add transition for smoother hover effect */
+}
+
+input[type="submit"]:hover {
+	background-color: #404040;
+	/* Change background color on hover to slightly darker grey */
+}
+
+.large-text {
+	font-family: 'Product Sans', Arial, sans-serif; /* Google logo font */
+	font-size: 300px; /* Adjust the size as needed */
+	color: white; /* Google logo color */
+	background-color: #DAA520; /* Background color */
+	padding: 20px; /* Add padding around the text */
+	text-align: center; /* Center the text */
+	border-radius: 10px; /* Add rounded corners */
+}
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+.large-text1 {
+	display: inline-block; /* Display as inline block to stay in line */
+	margin-left: -5%;
+	white-space: nowrap;
+}
+
+.first-letter {
+	display: inline-block; /* Display as inline block to stay in line */
+	vertical-align: top; /* Align with the top of the line */
+	animation: slideInFromLeft 1s ease;
+}
+
+.first-letter:hover {
+	color: #353535;
+}
+
+table {
+	margin: 0 auto;
+	width: 100%;
+	border-collapse: collapse;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* Add a semi-transparent white background */
+	padding: 20px; /* Add padding around the table */
+	border-radius: 10px; /* Add rounded corners */
+	box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28); /* Add a shadow */
+	margin-top: 40px;
+}
+
+/* Table header styles */
+thead {
+	background-color: white; /* Darker grey */
+	color: #DAA520; /* Light gold */
+}
+
+/* Table header cell styles */
+th {
+	padding: 15px;
+	text-align: left;
+}
+
+/* Table body row styles */
+tbody tr {
+	border: 1px solid #555;
+	box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28) /* Darker grey border between rows */
+}
+
+/* Table body cell styles */
+td {
+	padding: 15px;
+}
+
+/* Audio player styles */
+.audio-player {
+	display: flex;
+	align-items: center;
+}
+
+.audio-player audio {
+	width: 100%;
+}
+
+/* Hover effect for rows */
+tbody tr:hover {
+	background-color: #444; /* Dark grey on hover */
+	transition: background-color 0.2s ease;
+}
+
+.footer {
+	margin-top:5%;
+	bottom: 0;
+	left: 0;
+	right:0;
+	width: 98%;
+	background-color: #353535;
+	padding: 15px;
+}

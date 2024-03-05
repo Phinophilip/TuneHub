@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>TuneHub</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/CustomerHome.css}"></link>
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<div>
+				<h2>Customer-Home</h2>
+				<form action="logout">
+					<input type="submit" value="LOGOUT">
+				</form>
+			</div>
+		</header>
+		<div class="large-text">
+			<span class="first-letter">Tune</span>
+			<div class="large-text1">Hub</div>
+		</div>
+	</div>
+	<div class="form-container">
+		<form action="playsong" method="Get">
+			<input type="submit" value="Play Songs" />
+		</form>
+		<form action="search" method="GET">
+			<input type="text" name="search" placeholder="Search Songs">
+			<input type="submit" value="Search"> <br> <br>
+		</form>
+	</div>
+
+
+	<div class="table">
+		<table>
+			<tbody>
+				<tr>
+					<td><img
+						src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+						alt="TuneHub Logo" width="50" height="50"></td>
+					<td th:text="${songName}"></td>
+					<td><audio controls>
+							<source th:src="${audioLink}" type="audio/mpeg">
+						</audio></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+
+</body>
+</html>
+

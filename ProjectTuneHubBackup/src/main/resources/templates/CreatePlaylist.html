@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>CreatePlaylist</title>
+<link rel="icon"
+	href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/CreatePlaylist.css}"></link>
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Customer-Home</h2>
+		</header>
+	</div>
+
+	<div class="form">
+		<form action="addplaylist" method="Post">
+			<div class='label'>
+				<label>PlaylistName</label> <input type="text" name="name"
+					placeholder="Playlist Name">
+			</div>
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<th>SongName</th>
+							<th>Artist</th>
+							<th>Genre</th>
+							<th>PlayList</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr th:each="song : ${songs}">
+							<td th:text="${song.name}"></td>
+							<td th:text="${song.artist}"></td>
+							<td th:text="${song.genre}"></td>
+							<td><input type="checkbox" th:name="Songs"
+								th:value="${song.id}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<input type="submit" value="ADD PLAYLIST" />
+		</form>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Body style */
+body {
+	background-color: #DAA520; /* Lighter gold color for the body */
+	color: #FFD700; /* Lighter gold color for text */
+	font-family: Arial, sans-serif; /* Choose a suitable font family */
+	text-align: center; /* Center-align text */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Header style */
+header {
+	background-color: #353535;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28);
+}
+
+.header h1 {
+	margin-left: -73%;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 60px; /* Adjusted to account for footer height */
+}
+
+.left-panel {
+	position: fixed;
+	top: 100px; /* Adjusted to account for header height */
+	left: 0;
+	width: 200px;
+	bottom: 0; /* Adjusted to stop at the footer */
+	background-color: #353535;
+	transition: transform 0.3s ease;
+	transform: translateX(-100%);
+}
+
+.left-panel.show {
+	transform: translateX(0);
+}
+
+.toggle-btn {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #353535; /* Change background color */
+    color: #DAA520; /* Change text color */
+    padding: 18px 20px; /* Adjust padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+
+.quote-container {
+	display: flex; /* Use flexbox to align items */
+	align-items: center; /* Center items vertically */
+	font-family: 'Product Sans', Arial, sans-serif; /* Google logo font */
+	font-size: 50px; /* Adjust the size as needed */
+	color: white; /* Google logo color */
+	background-color: #DAA520; /* Background color */
+	padding: 20px; /* Add padding around the text */
+	text-align: center; /* Center the text */
+	border-radius: 10px; /* Add rounded corners */
+	/* Add a shadow */
+	position: relative;
+	width: 70%;
+	margin-left: auto; /* Push it to the right */
+	margin-right: 20px; /* Reset margin */
+	margin-top: 100px; /* Add margin from the top */
+}
+
+.quote-container img {
+	margin-right: 10px; /* Add space between image and text */
+}
+
+.quote-text {
+	color: #353535; /* Color for the quote text */
+}
+
+.author {
+	color: #353535; /* Color for the author */
+}
+
+.left-panel form {
+	margin-top: 20px;
+	display: block;
+}
+
+/* Form button style */
+input[type="submit"] {
+	background-color: #DAA520;
+	color: #353535; /* Lighter gold color for submit button text */
+	border: none; /* Remove border from submit button */
+	padding: 15px 30px;
+	/* Add padding to submit button for better readability */
+	border-radius: 5px; /* Add border radius for a rounded appearance */
+	cursor: pointer; /* Change cursor to pointer on hover */
+	transition: background-color 0.3s, color 0.3s;
+	/* Add transition for smoother hover effect */
+}
+
+input[type="submit"]:hover {
+	background-color: #404040;
+	/* Change background color on hover to slightly darker grey */
+}
+
+/* Footer style */
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #353535;
+	padding: 15px;
+}

@@ -1,0 +1,118 @@
+/* Body style */
+body {
+	background-color: #DAA520; /* Lighter gold color for the body */
+	color: #FFD700; /* Lighter gold color for text */
+	font-family: Arial, sans-serif; /* Choose a suitable font family */
+	text-align: center; /* Center-align text */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Header style */
+header {
+	background-color: #353535;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28);
+}
+
+.header h1 {
+	margin-left: -78%;
+}
+
+.container {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 60px; /* Adjusted to account for footer height */
+}
+
+.right-panel {
+  position: fixed;
+  top: 118px; /* Adjusted to account for header height */
+  right: 0;
+  width: 300px;
+  bottom: 0; /* Adjusted to stop at the footer */
+  background: linear-gradient(135deg, transparent 25%, #353535 25%, #353535 50%, transparent 50%, transparent 75%, #353535 75%, #353535) 0 0 / 10px 10px; /* Adjust stripe width, color, and angle */
+}
+.answers{
+	margin-top:45%;
+	background-color:#353535;
+	width:100%;
+	padding:20px 5px;
+	border-radius:10px;
+	box-shadow: 0 2px 6px rgba(32, 33, 36, 0.28);
+}
+.text{
+	color: #ff4411;
+}
+.quote-container {
+	display: flex; /* Use flexbox to align items */
+	align-items: center; /* Center items vertically */
+	font-family: 'Product Sans', Arial, sans-serif; /* Google logo font */
+	font-size: 50px; /* Adjust the size as needed */
+	color: white; /* Google logo color */
+	background-color: #DAA520; /* Background color */
+	padding: 20px; /* Add padding around the text */
+	text-align: center; /* Center the text */
+	border-radius: 10px; /* Add rounded corners */
+	/* Add a shadow */
+	position: relative;
+	width: 80%;
+	margin-left: auto; /* Push it to the right */
+	margin-right: 400px; /* Reset margin */
+	margin-top: 100px; /* Add margin from the top */
+}
+
+.quote-container img {
+	margin-right: 10px; /* Add space between image and text */
+}
+
+.quote-text {
+	color: #353535; /* Color for the quote text */
+}
+
+.author {
+	color: #353535; /* Color for the author */
+}
+
+
+/* Form button style */
+button {
+	background-color: #353535;
+	color: #DAA520; /* Lighter gold color for submit button text */
+	border: none; /* Remove border from submit button */
+	padding: 15px 30px;
+	/* Add padding to submit button for better readability */
+	border-radius: 5px; /* Add border radius for a rounded appearance */
+	cursor: pointer; /* Change cursor to pointer on hover */
+	transition: background-color 0.3s, color 0.3s;
+	/* Add transition for smoother hover effect */
+	margin-top:5px;
+}
+
+.answers ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+	background-color: #ff6600;
+	/* Change background color on hover to slightly darker grey */
+}
+
+/* Footer style */
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #353535;
+	padding: 15px;
+}

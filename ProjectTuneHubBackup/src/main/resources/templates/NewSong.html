@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>TuneHub</title>
+<link rel="icon" href="https://github.com/Phinophilip/SongList/raw/main/TuneHub.logo.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" th:href="@{/NewSong.css}"></link>
+</head>
+<body>
+	<div class="header">
+		<header>
+			<img
+				src="https://raw.githubusercontent.com/Phinophilip/SongList/14a7b751e29feded51ca19a13e3d316e08518911/TuneHub.logo.jpg"
+				alt="TuneHub Logo" width="50" height="50">
+			<h1>TuneHub</h1>
+			<h2>Admin-Home</h2>
+		</header>
+	</div>
+	<div class="form">
+		<h2>AddSong</h2>
+		<form action="addsong" method="Post">
+			<label>Song name </label> <input type="text" name="name" required>
+			<br> <br> <label>Artist </label> <input type="text"
+				name="artist" required> <br> <br> <label>Genre
+			</label> <input type="text" name="genre" required> <br> <br>
+			<label>Link </label> <input type="text" name="link" required>
+			<br> <br> <input type="submit" value="AddSongs">
+		</form>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>Address: TuneHub</p>
+		</footer>
+	</div>
+</body>
+</html>
